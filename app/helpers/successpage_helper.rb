@@ -1,0 +1,2 @@
+module SuccesspageHelper
+end
