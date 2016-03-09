@@ -37,3 +37,8 @@
         </br>
     <input id="" type="Submit" name="Submit" value="Submit"/>
 </form>
+
+
+<% if flash[:notice2] %>
+  <div class="notice"><%= flash[:notice2] %></div>
+<% end %>

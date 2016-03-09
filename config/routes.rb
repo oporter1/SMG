@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   post 'users/logincheck'
 
-
+  post 'users/register'
 
   # post 'loginpage/success'
 
