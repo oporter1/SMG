@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
-  get 'successpage/success'
+  post 'users/success'
 
-  get 'loginpage/username'
+  get 'users/loginpage'
 
   get 'users/new'
 
   post 'users/create'
 
+  post 'users/logincheck'
+
+
+
+  # post 'loginpage/success'
 
   # get 'users/create'
   # The priority is based upon order of creation: first created -> highest priority.

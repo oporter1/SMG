@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :postalcode
       t.string :country
       t.string :email
-      t.string :user_id
+      t.string :username
       t.string :password
 
       t.timestamps null: false
