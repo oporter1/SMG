@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  # root to: "users#loginpage"
+  
+
   post 'users/success'
 
   get 'users/loginpage'
