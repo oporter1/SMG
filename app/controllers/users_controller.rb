@@ -56,6 +56,12 @@ class UsersController < ApplicationController
   end
 
   def logincheck
+    #putting the params into a cookie
+    if params.has_key?(:username) && !params[:username].strip.empty?
+          cookies[:name] = params[:username]
+        end
+    #storing the cookie into a instance variable
+    @storedincookie=cookies[:name]
     #we check the Users table to see if there are any matches in the database to the username that was entered. Then we store it in @users
     @users=User.find_by_username(params[:username])
     # if the username entered is in the database already, then render to success page
@@ -63,7 +69,7 @@ class UsersController < ApplicationController
       render 'users/success'
     #if there is no match to the database or nothing was entered, we send user back to login page
     else
-      flash[:notice] = "Log in failed, try again ***********************"
+      flash[:notice] = "Log in failed, try again"
       render 'users/loginpage'
     end
   end
@@ -72,9 +78,18 @@ class UsersController < ApplicationController
   end
 
   def register
-  #when you click the reg button  
+  #when you click the reg button
   #will redirect you to the page to fill out and register
   render 'users/new'
+  end
+
+  def logout
+    #deleting the cookie
+    cookies.delete :name
+    render 'users/logoutpage'
+  end
+
+  def logoutpage
   end
 
 end

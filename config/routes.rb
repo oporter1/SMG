@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   post 'users/register'
 
+  post 'users/logout'
+
   # post 'loginpage/success'
 
   # get 'users/create'
