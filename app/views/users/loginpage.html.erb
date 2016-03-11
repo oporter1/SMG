@@ -1,6 +1,6 @@
-<h1>Login Page</h1>
+<!-- <h1>Login Page</h1> -->
 <!-- #action is where to send the form data once submit is pressed -->
-<form method="post" action="logincheck">
+<!-- <form method="post" action="logincheck">
   <label for="username"> User Name: </label>
   <input id="username" type="text" name="username" required/>
 </br>
@@ -11,13 +11,33 @@
 </br>
   <input id="" type="Submit" name="Submit" value="Submit"/>
 </form>
-<br>
+<br> -->
 
 <!--when you click on register button it will redirect you to the new page (aka the page were you fill out your info)  -->
-<form method="post" action="register">
+<!-- <form method="post" action="register">
 <input id="" type="Submit" name="Register" value="Register"/>
 </form>
 
   <% if flash[:notice] %>
     <div class="notice"><%= flash[:notice] %></div>
-  <% end %>
+  <% end %> -->
+
+<div class="login-wrap">
+  <h2>Login Page</h2>
+
+  <div class="form">
+    <form method="post" action="logincheck">
+      <input type="text" placeholder="Username" name="username" />
+      <input type="password" placeholder="Password" name="password" />
+      <input type="submit" name="Submit" value="Submit" id="Submit" />
+      <!-- <button> Sign in </button> -->
+      <a href="/users/new"> <p> Don't have an account? Register here. </p></a>
+
+      <% if flash[:notice] %>
+        <div class="notice"><%= flash[:notice] %></div>
+      <% end %>
+    </form>
+
+  </div>
+
+</div>

@@ -69,7 +69,7 @@ class UsersController < ApplicationController
       render 'users/success'
     #if there is no match to the database or nothing was entered, we send user back to login page
     else
-      flash[:notice] = "Log in failed, try again"
+      flash[:notice] = "Login failed, please try again or register."
       render 'users/loginpage'
     end
   end

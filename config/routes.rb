@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   # root to: "users#loginpage"
-  
 
   post 'users/success'
 
@@ -16,6 +15,8 @@ Rails.application.routes.draw do
   post 'users/register'
 
   post 'users/logout'
+
+  get 'users/show'
 
   # post 'loginpage/success'
 

@@ -1,5 +1,5 @@
 <!--printing out the store information  -->
-<h1>Confirmation Page</h1>
+<!-- <h1>Confirmation Page</h1>
 <br>Name :<%=@user.name%>
 <br>Address :<%=@user.address%>
 <br>City :<%=@user.city%>
@@ -8,4 +8,27 @@
 <br>Country :<%=@user.country%>
 <br>Email :<%=@user.email%>
 <br>User ID :<%=@user.username%>
-<br>Password :<%=@user.password%>
+<br>Password :<%=@user.password%> -->
+
+
+<div class="login-wrap">
+  <h2>Confirmation Page</h2>
+
+  <div class="form">
+    <form method="post" action="logincheck">
+      <!-- <input type="text" placeholder="Username" name="username" />
+      <input type="password" placeholder="Password" name="password" /> -->
+      <br><span style="font-family:Helvetica Neue"> Name :<%=@user.name%> </span>
+      <br>Address :<%=@user.address%>
+      <br>City :<%=@user.city%>
+      <br>State :<%=@user.state%>
+      <br>Postal Code :<%=@user.postalcode%>
+      <br>Country :<%=@user.country%>
+      <br>Email :<%=@user.email%>
+      <br>User ID :<%=@user.username%>
+      <br>Password :<%=@user.password%>
+
+      <input type="submit" action="loginpage" name="Log In" value="Log In" id="Submit"/>
+    </form>
+  </div>
+</div>
